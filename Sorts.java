@@ -1,28 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 public class Sorts{
-	public static void main(String[] args){
-		double[] bleg=new double[100];
-		for(int i=0; i<bleg.length; i++){
-			bleg[i]=Math.random()*100;
-		}
-		long totalFirst=0;
-		long totalSecond=0;
-		for(int i=0; i<50; i++){
-			long firstStart=System.nanoTime();
-			double[] sortedFirst=bubblesort(bleg);
-			long elapsedFirst=System.nanoTime()-firstStart;
-			long secondStart=System.nanoTime();
-			double[] sortedSecond=bubblesort(bleg);
-			long elapsedSecond=System.nanoTime()-secondStart;
-			totalFirst+=elapsedFirst;
-			totalSecond+=elapsedSecond;
-		}
-		System.out.println((totalFirst/50)+" "+(totalSecond/50));
-		//for(double i : combsort(bleg)){
-			//System.out.println(i+" ");
-		//}
-	}
 	public static double[] quicksort(double[] array){
 		if(array.length<=1){
 			return array;
